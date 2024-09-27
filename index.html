@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/reset-css@5.0.2/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Poppins:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <symbol id="link">
+                <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.71332 11.2867C9.39591 11.969 10.3215 12.3523 11.2867 12.3523C12.2518 12.3523 13.1774 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5002 7.10493 17.5002 6.13959C17.5002 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8257 2.49976 13.8604 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L9.99998 4.8525" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+            <symbol id="github">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"
+            fill="currentColor" />
+            </symbol>
+            <symbol id="twitter">
+                <path
+                                d="M16.875 1.875C8.59152 1.875 1.875 8.59152 1.875 16.875C1.875 25.1585 8.59152 31.875 16.875 31.875C25.1585 31.875 31.875 25.1585 31.875 16.875C31.875 8.59152 25.1585 1.875 16.875 1.875ZM24.0837 13.1819C24.0937 13.3393 24.0937 13.5033 24.0937 13.6641C24.0937 18.5792 20.3504 24.2411 13.51 24.2411C11.4007 24.2411 9.44531 23.6283 7.79799 22.5737C8.09933 22.6071 8.38728 22.6205 8.69531 22.6205C10.4364 22.6205 12.0368 22.0312 13.3125 21.0335C11.6786 21 10.3058 19.9286 9.83705 18.4554C10.4096 18.5391 10.9252 18.5391 11.5145 18.3884C10.6732 18.2175 9.91699 17.7605 9.37438 17.0953C8.83178 16.43 8.53623 15.5973 8.53795 14.7388V14.692C9.03013 14.9699 9.60938 15.1406 10.2154 15.1641C9.70595 14.8245 9.28814 14.3645 8.99903 13.8249C8.70993 13.2852 8.55845 12.6825 8.55804 12.0703C8.55804 11.3772 8.73884 10.7444 9.06362 10.1953C9.99744 11.3449 11.1627 12.2851 12.4837 12.9548C13.8047 13.6245 15.2518 14.0088 16.731 14.0826C16.2054 11.5547 18.0938 9.50893 20.3638 9.50893C21.4353 9.50893 22.3996 9.95759 23.0792 10.6808C23.9196 10.5234 24.7232 10.2087 25.4397 9.78683C25.1618 10.6473 24.5792 11.3739 23.8058 11.8326C24.5558 11.7522 25.279 11.5446 25.9487 11.2533C25.4431 11.9967 24.8103 12.6562 24.0837 13.1819Z"
+                                fill="currentColor" />
+            </symbol>
+            <symbol id="inst">
+                <path
+                                d="M15 0.599976C7.04701 0.599976 0.600006 7.04698 0.600006 15C0.600006 22.953 7.04701 29.4 15 29.4C22.953 29.4 29.4 22.953 29.4 15C29.4 7.04698 22.953 0.599976 15 0.599976ZM11.475 20.9685H8.55901V11.5845H11.475V20.9685ZM9.99901 10.4325C9.07801 10.4325 8.48251 9.77997 8.48251 8.97297C8.48251 8.14948 9.09601 7.51648 10.0365 7.51648C10.977 7.51648 11.553 8.14948 11.571 8.97297C11.571 9.77997 10.977 10.4325 9.99901 10.4325ZM22.125 20.9685H19.209V15.768C19.209 14.5575 18.786 13.7355 17.7315 13.7355C16.926 13.7355 16.4475 14.292 16.236 14.8275C16.158 15.018 16.1385 15.288 16.1385 15.5565V20.967H13.221V14.577C13.221 13.4055 13.1835 12.426 13.1445 11.583H15.678L15.8115 12.8865H15.87C16.254 12.2745 17.1945 11.3715 18.768 11.3715C20.6865 11.3715 22.125 12.657 22.125 15.42V20.9685Z"
+                                fill="currentColor" />
+            </symbol>
+        </defs>
+    </svg>
+    <header class="header">
+        <div class="container header_inner">
+            <a href="#" class="header_logo">
+                <img src="images/logo 1.svg" alt="{007 pavanmg}">
+            </a>
+            <div class="header_nav">
+                <nav class="nav">
+                    <div class="menu">
+                            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                            <label for="burger-checkbox" class="burger"></label>
+                        <ul class="menu-list">
+                            <li><a href="#" class="nav-link menu-item">Home</a><li>
+                            <li><a href="#about" class="nav-link menu-item">About</a><li>
+                            <li><a href="#tech-stack" class="nav-link menu-item">Tech Stack</a><li>
+                            <li><a href="#projects" class="nav-link menu-item">Projects</a><li>
+                            <li><a href="#contact" class="nav-link menu-item">Contact</a><li>
+                            <li><a href="#" class="nav-link menu-item social-menu_item">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#github"/>
+                                </svg>
+                            </a><li>
+                            <li><a href="" class="nav-link menu-item social-menu_item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#twitter" />
+                                </svg>
+                            </a><li>
+                            <li><a href="" class="nav-link menu-item social-menu_item">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#inst" />
+                                </svg>
+                            </a><li>
+                                   
+                        </ul>
+                    </div>              
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="about">
+            <div class="container about_inner">
+                <div class="about_text">
+                    <h1 class="about_title"> Hi 👋,
+                        <br>My name is
+                        <br><span class="gradient-text">Pavan MG</span>
+                        <br>I build things for web
+                    </h1>
+                </div>
+                <div class="about_photo">
+                    <div class="about_img-wrap">
+                        <img src="images/68ef7bac9b2e7b78919f0e2b2b6995bc.jpg" alt="photo-PavanMG" class="photo-pavan">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tech-stack" class="tech-stack">
+            <div class="container tech-stack_text">
+                <h2 class="section-title">My Tech Stack</h2>
+                <h3 class="section-subtitle">Technologies I've been working with recently</h3>
+            </div>
+            <div class="container">
+                <div class=" tech-stack_list">
+                    <div class="tech-stack_item"><img src="images/vscode-icons_file-type-html.svg" alt="HTML"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/vscode-icons_file-type-css.svg" alt="CSS"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/vscode-icons_file-type-js-official.svg" alt="JS"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/logos_react.svg" alt="React"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/Vector.svg" alt="Vector"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/logos_bootstrap.svg" alt="Bootstrap"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/vscode-icons_file-type-tailwind.svg" alt="Tailwind"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/logos_sass.svg" alt="SASS"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/logos_git-icon.svg" alt="Git"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/cib_greensock.svg" alt="Greensock"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/vscode-icons_file-type-vscode.svg" alt="VSCode"
+                            class="tech-stack_img"></div>
+                    <div class="tech-stack_item"><img src="images/akar-icons_github-fill.svg" alt="GitHub"
+                            class="tech-stack_img"></div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="projects_text">
+                    <h2 class="section-title">Projects</h2>
+                    <h3 class="section-subtitle">Things I've built so far</h3>
+                </div>
+                <div class="projects_list">
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/e7872c6a2058b9625737f5b75b60be13.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/Rectangle 6.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/Rectangle 8.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/Rectangle 12.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/Rectangle 13.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_item">
+                        <div class="project-card">
+                            <div class="project-card_img-wrap">
+                                <img src="images/Rectangle 14.jpg" alt="" class="project-card_img">
+                            </div>
+                            <div class="project-card_body">
+                                <h4 class="project-card_title">Project Tile goes here</h4>
+                                <div class="project-card_text">This is sample project description random things are here
+                                    in description This is sample project lorem ipsum generator for dummy content</div>
+                                <div class="project-card_stack">
+                                    <strong>Tech stack:</strong> HTML , JavaScript, SASS, React
+                                </div>
+                                <div class="project-card_footer">
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#link"/>
+                                        </svg>        
+                                        <span class="link-underline_text">Live Preview</span>                                    
+                                    </a>
+                                    <a href="#" class="project-card_link link-underline">
+                                        <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#github"/>
+                                        </svg>
+                                        <span class="link-underline_text">View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div id="contact" class="footer_top">
+                <a href="#" class="footer_logo">
+                    <img src="images/logo 2.svg" alt="{007 pavanmg}">
+                </a>
+                <div class="footer_contacts">
+                    <a href="tel:+91 12345 09876" class="nav-link nav-link--footer">+91 12345 09876</a>
+                    <a href="mailto:info@example.com" class="nav-link nav-link--footer">info@example.com</a>
+                    <nav class="social-nav">
+                        <a href="#" class="nav-link nav-link--footer">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#github"/>
+                            </svg>
+                        </a>
+                        <a href="" class="nav-link nav-link--footer">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#twitter" />
+                            </svg>
+                        </a>
+                        <a href="" class="nav-link nav-link--footer">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#inst" />
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <nav class="nav">
+                    <a href="#" class="nav-link nav-link--footer">Home</a>
+                    <a href="#about" class="nav-link nav-link--footer">About</a>
+                    <a href="#tech-stack" class="nav-link nav-link--footer">Tech Stack</a>
+                    <a href="#projects" class="nav-link nav-link--footer">Projects</a>
+                    <a href="#contact" class="nav-link nav-link--footer">Contact</a>
+                </nav>
+                <div class="footer_copyright">
+                    Designed and built by <span class="gradient-text">Pavan MG</span> with <span class="gradient-text">Love</span> & <span class="gradient-text">Coffee</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
